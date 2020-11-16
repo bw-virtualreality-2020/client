@@ -1,13 +1,25 @@
+import React from 'react';
+import { Switch, Route, Link } from 'react-router-dom';
+
+//  ROUTES
+import Home from './components/routes/Home';
+import Dashboard from './components/routes/DashBoard';
+
 function App() {
   return (
     <>
-      <header>
-        {/* nav goes here */}
+      <header> {/* nav goes here */}
+        <nav>
+          <Link to='/'>Home</Link>
+          <Link to='/dashboard'>DashBoard</Link>
+        </nav>
       </header>
-      <h1>App</h1>
-      <main>
-        <p>blah</p>
-      </main>
+
+      {/* ROUTES  */}
+      <Switch>
+        <Route path='/dashboard' component={Dashboard} />
+        <Route path='/' component={Home} />
+      </Switch>
     </>
   );
 }
