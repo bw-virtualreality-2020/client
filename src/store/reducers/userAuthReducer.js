@@ -20,7 +20,7 @@ function userAuthReducer(state = initialState, action) {
             
             break;
         default:
-            break;
+            return state;
     }
 }
 
