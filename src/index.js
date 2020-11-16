@@ -11,7 +11,7 @@ import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 
 //modules
-import rootReducer from './reducers'
+import rootReducer from './store/reducers'
 
 //redux dev tools
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
@@ -22,7 +22,11 @@ const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

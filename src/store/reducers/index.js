@@ -6,8 +6,8 @@ import userAuthReducer from './userAuthReducer'
 
 //root reducer
 const rootReducer = combineReducers({
-    userAuthReducer,
+    userAuthReducer
 })
 
-//export reducer
+//export reducer 
 export default rootReducer
