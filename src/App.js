@@ -1,8 +1,14 @@
 function App() {
   return (
-    <main>
+    <>
+     <header>
+       {/* nav goes here */}
+     </header>
       <h1>App</h1> 
-    </main>
+      <main>
+        <p>blah</p>
+      </main>
+    </>
   );
 }
 
