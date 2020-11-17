@@ -21,13 +21,11 @@ export default function LoginForm(props) {
     };
     const onSubmit = evt => {
         evt.preventDefault();
-        const newUser = {
+        const user = {
             username: formValues.username.trim(),
-            userpassword: formValues.userpassword.trim(),
-            email: formValues.email.trim(),
-            role: formValues.role
+            password: formValues.password.trim(),
         };
-        console.log(newUser);
+        console.log(user);
     };
 
     return (
@@ -50,9 +48,9 @@ export default function LoginForm(props) {
                     Password:
                     <input
                         type="password"
-                        name="userpassword"
+                        name="password"
                         onChange={onChange}
-                        value={formValues.userpassword}
+                        value={formValues.password}
                         placeholder="Enter your password"
                         maxLength="30"
                     />

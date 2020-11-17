@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import registerUser from "../store/actions/registerUser";
+import { useDispatch } from 'react-redux';
 
 const initialFormValues = {
     username: "",
-    userpassword: "",
+    password: "",
     email: "",
     role: ""
 };
@@ -11,6 +13,7 @@ export default function Register(props) {
     const { values, update, submit } = props;
     const [users, setUsers] = useState([]);
     const [formValues, setformValues] = useState(initialFormValues);
+    const dispatch = useDispatch();
 
     const onChange = evt => {
         const { name, value } = evt.target;
@@ -23,11 +26,12 @@ export default function Register(props) {
         evt.preventDefault();
         const newUser = {
             username: formValues.username.trim(),
-            userpassword: formValues.userpassword.trim(),
+            password: formValues.password.trim(),
             email: formValues.email.trim(),
             role: formValues.role
         };
-        console.log(newUser);
+        // console.log(newUser);
+        dispatch(registerUser(newUser));
     };
 
     return (
@@ -48,9 +52,9 @@ export default function Register(props) {
                     Password
                     <input
                         type="password"
-                        name="userpassword"
+                        name="password"
                         onChange={onChange}
-                        value={formValues.userpassword}
+                        value={formValues.password}
                         placeholder="Enter your password"
                         maxLength="30"
                     />
@@ -61,7 +65,7 @@ export default function Register(props) {
                         type="email"
                         name="email"
                         onChange={onChange}
-                        value={formValues.emsil}
+                        value={formValues.email}
                         placeholder="Enter your email"
                         maxLength="30"
                     />
