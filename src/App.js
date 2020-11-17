@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
+import PrivateRoute from './components/routes/PrivateRoute';
 
 //  ROUTES
 import Home from './components/routes/Home';
@@ -23,7 +24,7 @@ function App() {
       <Switch>
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
-        <Route path='/dashboard' component={Dashboard} />
+        <PrivateRoute path='/dashboard' component={Dashboard} />
         <Route path='/' component={Home} />
       </Switch>
     </>
