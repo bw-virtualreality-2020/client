@@ -19,7 +19,6 @@ function App() {
           <Link to='/login'>Login</Link>
         </nav>
       </header>
-
       {/* ROUTES  */}
       <Switch>
         <Route path='/login' component={Login} />
