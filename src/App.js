@@ -14,7 +14,6 @@ function App() {
           <Link to='/dashboard'>DashBoard</Link>
         </nav>
       </header>
-
       {/* ROUTES  */}
       <Switch>
         <Route path='/dashboard' component={Dashboard} />
