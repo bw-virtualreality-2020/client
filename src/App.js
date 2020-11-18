@@ -5,6 +5,7 @@ import PrivateRoute from './components/routes/PrivateRoute';
 //  ROUTES
 import Home from './components/routes/Home';
 import Dashboard from './components/routes/DashBoard';
+import Projects from './components/routes/Projects';
 import Register from './components/Register';
 import Login from './components/Login'; 
 
@@ -15,6 +16,7 @@ function App() {
         <nav>
           <Link to='/'>Home</Link>
           <Link to='/dashboard'>DashBoard</Link>
+          <Link to='/projects'>Projects</Link>
           <Link to='/register'>Register</Link>
           <Link to='/login'>Login</Link>
         </nav>
@@ -23,6 +25,7 @@ function App() {
       <Switch>
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
+        <PrivateRoute path='/projects' component={Projects}/> 
         <PrivateRoute path='/dashboard' component={Dashboard} />
         <Route path='/' component={Home} />
       </Switch>
