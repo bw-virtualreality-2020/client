@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { configs } from '../config';
 import loginUser from "../store/actions/loginUser";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 const initialFormValues = {
@@ -11,9 +11,10 @@ const initialFormValues = {
 
 
 export default function LoginForm(props) {
-    const { values, update, submit } = props;
-    const [users, setUsers] = useState([]);
+    // const { values, update, submit } = props;
+    // const [users, setUsers] = useState([]);
     const [formValues, setformValues] = useState(initialFormValues);
+    const [token] = useSelector(state => [state.userAuthReducer.token]);
     const dispatch = useDispatch();
     const { push } = useHistory(); 
 
@@ -31,8 +32,14 @@ export default function LoginForm(props) {
             password: formValues.password.trim(),
         };
         dispatch(loginUser(user));
-        push('/dashboard')
+        // push('/dashboard');
     };
+
+    useEffect(() => {
+        if (token) {
+            push('/dashboard')
+        }
+    }, [token])
 
     return (
         

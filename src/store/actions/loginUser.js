@@ -7,11 +7,13 @@ export const LOGIN_ERR = "LOGIN_ERR";
 
 const loginUser = (credentials) => dispatch => {
 
+
     dispatch({type: START_LOGIN});
 
     axios
     .post(`${configs.API_ENDPOINT}/auth/login`, credentials)
     .then(({data}) => {
+        console.log(data);
         window.localStorage.setItem(configs.TOKEN, data.token)
         dispatch({type: LOGIN_SUCCESS, payload: data})
     })
