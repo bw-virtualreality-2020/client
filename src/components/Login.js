@@ -35,8 +35,7 @@ export default function LoginForm(props) {
     };
 
     return (
-
-
+        
         <form className="form container" onSubmit={onSubmit}>
             <div className="form-group inputs">
                 <label>
