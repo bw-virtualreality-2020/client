@@ -11,7 +11,6 @@ const registerUser = (newUsr) => dispatch => {
     axios
     .post(`${configs.API_ENDPOINT}/auth/register`, newUsr)
     .then(({data}) => {
-        // window.localStorage.setItem(configs.TOKEN, data.token) // only need to set token in login
         dispatch({type: REGISTER_SUCCESS, payload: data})
     })
     .catch(({response: {data}}) => {
