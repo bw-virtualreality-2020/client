@@ -42,4 +42,4 @@ function userAuthReducer(state = initialState, action) {
     }
 }
 
-export default userAuthReducer
+export default userAuthReducer;

@@ -5,6 +5,7 @@ import PrivateRoute from './components/routes/PrivateRoute';
 //  ROUTES
 import Home from './components/routes/Home';
 import Dashboard from './components/routes/DashBoard';
+import Projects from './components/routes/Projects';
 import Register from './components/Register';
 import Login from './components/Login'; 
 import Projects from './components/routes/Projects';
@@ -16,6 +17,7 @@ function App() {
         <nav>
           <Link to='/'>Home</Link>
           <Link to='/dashboard'>DashBoard</Link>
+          <Link to='/projects'>Projects</Link>
           <Link to='/register'>Register</Link>
           <Link to='/login'>Login</Link>
         </nav>
