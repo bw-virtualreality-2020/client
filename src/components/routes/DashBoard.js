@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { axiosWithAuth } from '../utils/AxiosWithAuth';
 import { useSelector } from 'react-redux';
 
 
