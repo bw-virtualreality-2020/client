@@ -22,8 +22,8 @@ function userAuthReducer(state = initialState, action) {
             
             return {...state, loading: true};
         case REGISTER_SUCCESS:
-            console.log(payload);
-            return {...state, loading: false, authenticated: true, newUser: payload.user, token: payload.token}
+            // console.log(payload);
+            return {...state, loading: false, authenticated: true, newUser: payload.user, token: payload.token, type: payload.user.role}
         case REGISTER_ERR:
             return {...state, loading: false, error: payload.message}
         case START_LOGIN:
