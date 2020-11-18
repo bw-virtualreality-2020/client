@@ -12,14 +12,13 @@ const initialState = {
     newUser: {},
     user: {},
     error: ''
-}
+} 
 
 function userAuthReducer(state = initialState, action) {
     const {type, payload} = action
 
     switch (type) {
         case ADD_USER:
-            
             return {...state, loading: true};
         case REGISTER_SUCCESS:
             // console.log(payload);
@@ -29,7 +28,7 @@ function userAuthReducer(state = initialState, action) {
         case START_LOGIN:
             return { ...state, loading: true }
         case LOGIN_SUCCESS:
-            return { ...state, loading: false, authenticated: true, message: payload.message, token: payload.token, user: payload.user }
+            return { ...state, loading: false, authenticated: true, message: payload.message, token: payload.token, type: payload.user.role, user: payload.user }
         case LOGIN_ERR:
             return { ...state, loading: false, error: payload.message }
         case START_LOGOUT:
