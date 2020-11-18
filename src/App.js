@@ -7,6 +7,7 @@ import Home from './components/routes/Home';
 import Dashboard from './components/routes/DashBoard';
 import Register from './components/Register';
 import Login from './components/Login'; 
+import Projects from './components/routes/Projects';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Switch>
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
+        <PrivateRoute path='/projects' component={Projects} />
         <PrivateRoute path='/dashboard' component={Dashboard} />
         <Route path='/' component={Home} />
       </Switch>
