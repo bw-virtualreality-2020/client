@@ -19,7 +19,6 @@ function userAuthReducer(state = initialState, action) {
 
     switch (type) {
         case ADD_USER:
-            
             return {...state, loading: true};
         case REGISTER_SUCCESS:
             // console.log(payload);
