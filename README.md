@@ -1,6 +1,6 @@
 # VR Venture
 
-_Let's Venture - Virtually_
+_Venture Beyond Limitations_
 
 > LIVE SITE: [Here](https://client-nine-pied.vercel.app/)
 >
@@ -11,6 +11,18 @@ _Let's Venture - Virtually_
 > SERVER: [Here](https://github.com/bw-virtualreality-2020/server)
 
 ## About
+
+Virtual Reality has transformed the entertainment world.
+Sponsorships, conventions, streamers, and creators would all agree.
+
+However, this industry is far from equal opportunity.
+
+Each year, countless ideas never venture beyond the limitations of society.
+That's hardly fair. And we are going to change that.
+
+Our mission is to give all creators the same chance.
+
+Let us venture. Together.
 
 ## Team 💻
 
@@ -33,5 +45,3 @@ _Let's Venture - Virtually_
 <img src="https://avatars1.githubusercontent.com/u/39205476?s=460&u=e84d6fe8caf14bcf5e5dc5be000bdd8ec6e861d6&v=4" alt="Avatar for Solomon" width="150">
 
 **Solomon Zelenko** | [Github](https://github.com/zempo)
-
----
