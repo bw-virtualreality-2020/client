@@ -12,7 +12,7 @@ const initialState = {
     newUser: {},
     user: {},
     error: ''
-}
+} 
 
 function userAuthReducer(state = initialState, action) {
     const {type, payload} = action
