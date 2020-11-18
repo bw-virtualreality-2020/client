@@ -6,6 +6,7 @@ export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_ERR = "LOGIN_ERR";
 
 const loginUser = (credentials) => dispatch => {
+
     dispatch({type: START_LOGIN});
 
     axios
