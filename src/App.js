@@ -8,7 +8,6 @@ import Dashboard from './components/routes/DashBoard';
 import Projects from './components/routes/Projects';
 import Register from './components/Register';
 import Login from './components/Login'; 
-import Projects from './components/routes/Projects';
 
 function App() {
   return (
