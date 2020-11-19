@@ -35,7 +35,8 @@ function Footer(props) {
     
     return (
         <footer>
-            <h2>VR Venture</h2>
+            <hr/>
+            <h3>Venture Beyond Limitations</h3>
             {/* todo (post mvp): add site map and other data */}
             {/* <nav>
                 <Link to='/'>Home</Link>
