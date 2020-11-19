@@ -22,7 +22,6 @@ function Project(props) {
     return (
         <div>
         <h1>This is where the projects live!</h1>
-        {console.log(props.data)}
         </div>
     );
 }
