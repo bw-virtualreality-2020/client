@@ -5,12 +5,12 @@ export const START_CATEGORY_ADD   = "START_CATEGORY_ADD ";
 export const ADD_CATEGORY_SUCCESS = "ADD_CATEGORY_SUCCESS";
 export const ADD_CATEGORY_ERR = "ADD_CATEGORY_ERR";
 
-const addProject = (newProj) => dispatch => {
+const addCategory = (newCategory) => dispatch => {
     
     dispatch({type: START_CATEGORY_ADD})
 
     axiosWithAuth()
-    .post(`${configs.API_ENDPOINT}/categories`, newProj)
+    .post(`${configs.API_ENDPOINT}/categories`, newCategory)
     .then(res => {
         dispatch({type: ADD_CATEGORY_SUCCESS, payload: res.data})
     })
@@ -19,4 +19,4 @@ const addProject = (newProj) => dispatch => {
     })
 }
 
-export default addProject
+export default addCategory
