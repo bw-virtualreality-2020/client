@@ -11,7 +11,7 @@ const addCategory = (newCategory) => dispatch => {
 
     axiosWithAuth()
     .post(`${configs.API_ENDPOINT}/categories`, newCategory)
-    .then({data} => {
+    .then(({data}) => {
         dispatch({type: ADD_CATEGORY_SUCCESS, payload: data})
     })
     .catch(err => {

@@ -34,7 +34,7 @@ function userAuthReducer(state = initialState, action) {
         case START_LOGOUT:
             return { ...state, loading: true }
         case LOGOUT_SUCCESS:
-            return { ...state, loading: false, authenticated: false, message: '', token: '', user: {}, newUser: {} }
+            return { ...state, loading: false, authenticated: false, message: '', token: '', type: '', user: {}, newUser: {} }
         case LOGOUT_ERR:
             return { ...state, loading: false, error: 'Logout Failed' }
         default:

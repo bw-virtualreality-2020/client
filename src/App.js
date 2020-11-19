@@ -8,11 +8,12 @@ import Dashboard from './components/routes/DashBoard';
 import Projects from './components/routes/Projects';
 import Register from './components/Register';
 import Login from './components/Login'; 
+import NavBar from './components/static/NavBar';
 
 function App() {
   return (
     <>
-      <header> {/* nav goes here */}
+      {/* <header>
         <nav>
           <Link to='/'>Home</Link>
           <Link to='/dashboard'>DashBoard</Link>
@@ -20,7 +21,8 @@ function App() {
           <Link to='/register'>Register</Link>
           <Link to='/login'>Login</Link>
         </nav>
-      </header>
+      </header> */}
+      <NavBar />
       {/* ROUTES  */}
       <Switch>
         <Route path='/login' component={Login} />
