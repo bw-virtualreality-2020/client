@@ -1,13 +1,22 @@
 import { axiosWithAuth } from '../../components/utils/axiosWithAuth';
-// import { configs } from '../../config';
+import { configs } from '../../config';
 
-export const START_LOGIN = "START_LOGIN";
-export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
-export const LOGIN_ERR = "LOGIN_ERR";
+export const START_PROJECT_ADD   = "START_PROJECT_ADD ";
+export const ADD_PROJECT_SUCCESS = "ADD_PROJECT_SUCCESS";
+export const ADD_PROJECT_ERR = "ADD_PROJECT_ERR";
 
-const addProject = (info) => dispatch => {
+const addProject = (newProj) => dispatch => {
+    
+    dispatch({type: START_PROJECT_ADD})
+
     axiosWithAuth()
-    .then()
+    .post(`${configs.API_ENDPOINT}/projects`, newProj)
+    .then(res => {
+        dispatch({type: ADD_PROJECT_SUCCESS, payload: res.data})
+    })
+    .catch(err => {
+        dispatch({type: ADD_PROJECT_ERR, payload: err.message})
+    })
 }
 
 export default addProject
