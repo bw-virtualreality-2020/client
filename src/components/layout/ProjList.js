@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import getCategories from '../../store/actions/getCategory';
 import getProjects from '../../store/actions/getProjects';
+import Project from '../routes/Projects';
 
 function ProjList(props) {
     const {getProjects, getCategories} = props
@@ -17,7 +18,7 @@ function ProjList(props) {
     return (
         <section>
             <ul>
-                {projects && projects.length}
+                {projects.map((proj, i) => <Project project={proj} key={i} />)}
             </ul>
         </section>
     );
