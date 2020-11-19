@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 import PrivateRoute from './components/routes/PrivateRoute';
+import './styles/scss/Global.scss'
 
 //  ROUTES
 import Home from './components/routes/Home';
@@ -9,21 +10,12 @@ import Projects from './components/routes/Projects';
 import Register from './components/Register';
 import Login from './components/Login'; 
 import NavBar from './components/static/NavBar';
+import Footer from './components/static/Footer';
 
 function App() {
   return (
     <>
-      {/* <header>
-        <nav>
-          <Link to='/'>Home</Link>
-          <Link to='/dashboard'>DashBoard</Link>
-          <Link to='/projects'>Projects</Link>
-          <Link to='/register'>Register</Link>
-          <Link to='/login'>Login</Link>
-        </nav>
-      </header> */}
       <NavBar />
-      {/* ROUTES  */}
       <Switch>
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
@@ -31,6 +23,7 @@ function App() {
         <PrivateRoute path='/dashboard' component={Dashboard} />
         <Route path='/' component={Home} />
       </Switch>
+      <Footer />
     </>
   );
 }
