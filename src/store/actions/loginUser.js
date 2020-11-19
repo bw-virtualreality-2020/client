@@ -13,8 +13,8 @@ const loginUser = (credentials) => dispatch => {
     axios
     .post(`${configs.API_ENDPOINT}/auth/login`, credentials)
     .then(({data}) => {
-        console.log(data);
         window.localStorage.setItem(configs.TOKEN, data.token)
+        window.localStorage.setItem(configs.TYPE, data.user.user_role)
         dispatch({type: LOGIN_SUCCESS, payload: data})
     })
     .catch(({response: {data}}) => {

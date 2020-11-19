@@ -11,8 +11,8 @@ const getCategories = () => dispatch => {
 
     axiosWithAuth()
     .get(`${configs.API_ENDPOINT}/categories`)
-    .then(res => {
-        dispatch({type: GET_CATEGORY_SUCCESS, payload: res.data})
+    .then(({data}) => {
+        dispatch({type: GET_CATEGORY_SUCCESS, payload: data})
     })
     .catch(err => {
         dispatch({type: GET_CATEGORY_ERR, payload: err.message})

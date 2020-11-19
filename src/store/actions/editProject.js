@@ -11,8 +11,8 @@ const editProject = (newProjInfo) => dispatch => {
 
     axiosWithAuth()
     .put(`${configs.API_ENDPOINT}/projects/${newProjInfo.id}`, newProjInfo)
-    .then(res => {
-        dispatch({type: EDIT_PROJECT_SUCCESS, payload: res.data})
+    .then(({data}) => {
+        dispatch({type: EDIT_PROJECT_SUCCESS, payload: data})
     }) 
     .catch(err => {
         dispatch({type: EDIT_PROJECT_ERR, payload: err.message})

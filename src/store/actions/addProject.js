@@ -11,8 +11,8 @@ const addProject = (newProj) => dispatch => {
 
     axiosWithAuth()
     .post(`${configs.API_ENDPOINT}/projects`, newProj)
-    .then(res => {
-        dispatch({type: ADD_PROJECT_SUCCESS, payload: res.data})
+    .then(({data}) => {
+        dispatch({type: ADD_PROJECT_SUCCESS, payload: data})
     })
     .catch(err => {
         dispatch({type: ADD_PROJECT_ERR, payload: err.message})

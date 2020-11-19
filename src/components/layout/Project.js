@@ -6,7 +6,7 @@ function Project(props) {
     return (
         <li className='project-container'>
             <div className="project-info">
-                <img src={project_image} alt={`Avatar for ${project_name}.`} />
+                <img src={project_image || 'https://specials-images.forbesimg.com/imageserve/1150698673/960x0.jpg?fit=scale'} alt={`Avatar for ${project_name}.`} />
                 <h3>{project_name}</h3>
                 <p>{project_description}</p>  
             </div>
