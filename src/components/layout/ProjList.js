@@ -1,14 +1,30 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import getCategories from '../../store/actions/getCategory';
+import getProjects from '../../store/actions/getProjects';
 
 function ProjList(props) {
-    useEffect(() => {
+    const {getProjects, getCategories} = props
 
-    }, [])
+
+    const { projects } = props.state.projectsReducer
+
+    useEffect(()=>{
+        getProjects()
+        getCategories()
+    },[getProjects, getCategories])
+
     return (
         <section>
-            <h2>Projects</h2>
+            <ul>
+                {projects && projects.length}
+            </ul>
         </section>
-    )
+    );
 }
 
-export default ProjList
+const mapStateToProps = state => ({
+    state
+})
+
+export default connect (mapStateToProps, {getCategories, getProjects})(ProjList);

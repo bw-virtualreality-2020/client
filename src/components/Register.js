@@ -74,8 +74,8 @@ export default function Register(props) {
                 <label>
                     <select name="role" value={formValues.role} onChange={onChange}>
                         <option value="">Select One</option>
-                        <option value="Funder">Funder</option>
-                        <option value="Fundraiser">Fundraiser</option>
+                        <option value="funder">Funder</option>
+                        <option value="fundraiser">Fundraiser</option>
                     </select>
                 </label>
                 <div className="submit">
