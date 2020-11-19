@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import getCategories from '../../store/actions/getCategory';
 import getProjects from '../../store/actions/getProjects';
-import Project from '../routes/Projects';
+import Project from './Project';
 
 function ProjList(props) {
     const {getProjects, getCategories} = props
