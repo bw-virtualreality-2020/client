@@ -1,35 +1,12 @@
-import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import { axiosWithAuth } from '../utils/axiosWithAuth';
+import React from 'react';
+import ProjList from '../layout/ProjList';
 
 
-function Project(props) {
-
-    useEffect(()=>{
-        fetchUser();
-    },[])
- 
-    const fetchUser = () => {
-        axiosWithAuth()
-        .get('https://bw-virtualreality-2020.herokuapp.com/api/projects')
-        .then(res => {
-            console.log(res.data); 
-        })
-        .catch(err => {
-            console.log(err);
-        })
-    }
+export default function Project(props) {
     return (
-        <div>
-        <h1>This is where the projects live!</h1>
-        </div>
+        <section className='pg projects-pg'>
+        <h1>Projects</h1>
+        <ProjList />
+        </section>
     );
 }
-
-const mapStateToProps = (state) => {
-    return {
-        data: state.userAuthReducer
-    }
-}
-
-export default connect (mapStateToProps, {})(Project);

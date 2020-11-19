@@ -11,8 +11,8 @@ const deleteProject = (target) => dispatch => {
 
     axiosWithAuth()
     .delete(`${configs.API_ENDPOINT}/projects/${target}`)
-    .then(res => {
-        dispatch({type: DELETE_PROJECT_SUCCESS, payload: res.data})
+    .then(({data}) => {
+        dispatch({type: DELETE_PROJECT_SUCCESS, payload: data})
     }) 
     .catch(err => {
         dispatch({type: DELETE_PROJECT_ERR, payload: err.message})

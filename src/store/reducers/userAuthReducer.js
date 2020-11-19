@@ -22,19 +22,19 @@ function userAuthReducer(state = initialState, action) {
             return {...state, loading: true};
         case REGISTER_SUCCESS:
             // console.log(payload);
-            return {...state, loading: false, authenticated: true, newUser: payload.user, token: payload.token, type: payload.user.role}
+            return {...state, loading: false, authenticated: true, newUser: payload.user, token: payload.token, type: payload.user.user_role}
         case REGISTER_ERR:
             return {...state, loading: false, error: payload.message}
         case START_LOGIN:
             return { ...state, loading: true }
         case LOGIN_SUCCESS:
-            return { ...state, loading: false, authenticated: true, message: payload.message, token: payload.token, type: payload.user.role, user: payload.user }
+            return { ...state, loading: false, authenticated: true, message: payload.message, token: payload.token, type: payload.user.user_role, user: payload.user }
         case LOGIN_ERR:
             return { ...state, loading: false, error: payload.message }
         case START_LOGOUT:
             return { ...state, loading: true }
         case LOGOUT_SUCCESS:
-            return { ...state, loading: false, authenticated: false, message: '', token: '', user: {}, newUser: {} }
+            return { ...state, loading: false, authenticated: false, message: '', token: '', type: '', user: {}, newUser: {} }
         case LOGOUT_ERR:
             return { ...state, loading: false, error: 'Logout Failed' }
         default:

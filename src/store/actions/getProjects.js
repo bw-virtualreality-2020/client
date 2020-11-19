@@ -11,8 +11,8 @@ const getProjects = () => dispatch => {
 
     axiosWithAuth()
     .get(`${configs.API_ENDPOINT}/projects`)
-    .then(res => {
-        dispatch({type: GET_PROJECT_SUCCESS, payload: res.data})
+    .then(({data}) => {
+        dispatch({type: GET_PROJECT_SUCCESS, payload: data.projects})
     }) 
     .catch(err => {
         dispatch({type: GET_PROJECT_ERR, payload: err.message})
