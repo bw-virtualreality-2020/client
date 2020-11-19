@@ -1,7 +1,7 @@
-const { ADD_PROJECT_SUCCESS, ADD_PROJECT_ERR, START_PROJECT_ADD } = require("../actions/addProject");
-const { DELETE_PROJECT_SUCCESS, START_PROJECT_DELETE, DELETE_PROJECT_ERR } = require("../actions/deleteProject");
-const { EDIT_PROJECT_SUCCESS, START_PROJECT_EDIT, EDIT_PROJECT_ERR } = require("../actions/editProject");
 const {  GET_PROJECT_SUCCESS, GET_PROJECT_ERR, START_PROJECT_GET } = require("../actions/getProjects");
+const { ADD_PROJECT_SUCCESS, ADD_PROJECT_ERR, START_PROJECT_ADD } = require("../actions/addProject");
+const { EDIT_PROJECT_SUCCESS, START_PROJECT_EDIT, EDIT_PROJECT_ERR } = require("../actions/editProject");
+const { DELETE_PROJECT_SUCCESS, START_PROJECT_DELETE, DELETE_PROJECT_ERR } = require("../actions/deleteProject");
 
 const initialState = {
     loading: false,
