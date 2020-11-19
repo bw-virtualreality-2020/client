@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 import PrivateRoute from './components/routes/PrivateRoute';
+import styled from 'styled-components';
 
 //  ROUTES
 import Home from './components/routes/Home';
@@ -9,17 +10,28 @@ import Projects from './components/routes/Projects';
 import Register from './components/Register';
 import Login from './components/Login'; 
 
+const Nav = styled.nav`
+  position: fixed;
+`
+
+const NavLink = styled.a`
+  color: white;
+  padding: 10%;
+  font-size: 18px; 
+  font-weight: bold; 
+` 
+
 function App() {
   return (
     <>
       <header> {/* nav goes here */}
-        <nav>
-          <Link to='/'>Home</Link>
-          <Link to='/dashboard'>DashBoard</Link>
-          <Link to='/projects'>Projects</Link>
-          <Link to='/register'>Register</Link>
-          <Link to='/login'>Login</Link>
-        </nav>
+        <Nav>
+          <Link to='/'><NavLink>Home</NavLink></Link>
+          <Link to='/dashboard'><NavLink>DashBoard</NavLink></Link>
+          <Link to='/projects'><NavLink>Projects</NavLink></Link>
+          <Link to='/register'><NavLink>Register</NavLink></Link>
+          <Link to='/login'><NavLink>Login</NavLink></Link>
+        </Nav>
       </header>
       {/* ROUTES  */}
       <Switch>

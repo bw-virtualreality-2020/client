@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux';
-import 'css-doodle';
 import styled from 'styled-components';
 
 function Dashboard() {
@@ -32,9 +31,10 @@ function Dashboard() {
         color: white;
         display: flex;
         justify-content: center;
-        padding-top: 22%;
-        font-size: 35px;
+        padding-top: 20%;
+        font-size: 37px;
         font-weight: bold;
+        margin-top: 0;
     `
 
     return (
