@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
+import { axiosWithAuth } from '../utils/axiosWithAuth';
 
 
 function Project(props) {
@@ -11,9 +12,10 @@ function Project(props) {
     },[])
 
     const fetchUser = () => {
-        axios.get('https://bw-virtualreality-2020.herokuapp.com/api/projects')
+        axiosWithAuth()
+        .get('https://bw-virtualreality-2020.herokuapp.com/api/projects')
         .then(res => {
-            console.log(res); 
+            console.log(res.data); 
         })
         .catch(err => {
             console.log(err);

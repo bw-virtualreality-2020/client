@@ -1,8 +1,8 @@
 import axios from 'axios';
-import { config } from '../../config';
+import { configs } from '../../config';
 
 export const axiosWithAuth = () => {
-    const token = localStorage.getItem(config.TOKEN);
+    const token = localStorage.getItem(configs.TOKEN);
 
     return axios.create({
         baseURL: 'https://bw-virtualreality-2020.herokuapp.com/api',
